@@ -7,7 +7,6 @@ This project develops a machine learning pipeline to predict H1N1 and seasonal f
 
 The goal is to model vaccination uptake using demographic, behavioral, and perception-based features, while addressing challenges such as class imbalance, missing data, and heterogeneous feature types.
 ________________________________________
-Key Highlights
 •	Built an end-to-end ML pipeline for healthcare prediction
 •	Achieved AUC ~0.86 using ensemble modeling
 •	Applied advanced feature engineering and selection techniques
