@@ -14,7 +14,7 @@ ________________________________________
 •	Performed hyperparameter tuning using Optuna
 •	Extracted interpretable insights on vaccination behavior
 ________________________________________
-Problem Statement
+Problem Statement:
 
 Predict whether an individual receives:
 •	H1N1 flu vaccine
@@ -25,7 +25,7 @@ Demographics.
 Behavioral patterns.
 Risk perception.
 ________________________________________
-Methodology
+Methodology:
 
 1. Data Preprocessing
 Missing value handling:
@@ -36,21 +36,21 @@ StandardScaler
 Encoding:
 One-Hot Encoding (OHE)
 ________________________________________
-2. Feature Engineering
+2. Feature Engineering:
 Created derived features from behavioral and perception variables.
 Tested clustering-based feature augmentation (not retained due to performance drop)
 ________________________________________
-3. Feature Selection
+3. Feature Selection:
 Wrapper method using CatBoost.
 Correlation filtering (threshold > 0.8)
 Reduced dimensionality while improving model performance.
 ________________________________________
-4. Handling Class Imbalance
+4. Handling Class Imbalance:
 Applied:
 Class weighting.
 scale_pos_weight tuning.
 ________________________________________
-5. Modeling Approach
+5. Modeling Approach:
 
 Tested multiple models:
 Logistic Regression
@@ -61,7 +61,7 @@ Random Forest
 XGBoost
 LightGBM
 ________________________________________
-Final Model: Stacked Ensemble
+Final Model: Stacked Ensemble:
 
 Combined:
 LightGBM
@@ -71,11 +71,11 @@ Random Forest
 Result:
 Best AUC: ~0.8638
 ________________________________________
-6. Hyperparameter Optimization
+6. Hyperparameter Optimization:
 Used Optuna for efficient search
 Improved model performance by ~1–2% AUC
 ________________________________________
-Key Insights
+Key Insights:
 
 Top predictive features included:
 Age group
