@@ -21,65 +21,65 @@ Predict whether an individual receives:
 •	Seasonal flu vaccine
 
 Based on:
-•	Demographics
-•	Behavioral patterns
-•	Risk perception
+Demographics.
+Behavioral patterns.
+Risk perception.
 ________________________________________
 Methodology
 
 1. Data Preprocessing
-•	Missing value handling:
-o	Mean imputation (numerical)
-o	Mode / “missing” (categorical)
-•	Feature scaling:
-o	StandardScaler
-•	Encoding:
-o	One-Hot Encoding (OHE)
+Missing value handling:
+Mean imputation (numerical)
+Mode / “missing” (categorical)
+Feature scaling:
+StandardScaler
+Encoding:
+One-Hot Encoding (OHE)
 ________________________________________
 2. Feature Engineering
-•	Created derived features from behavioral and perception variables
-•	Tested clustering-based feature augmentation (not retained due to performance drop)
+Created derived features from behavioral and perception variables.
+Tested clustering-based feature augmentation (not retained due to performance drop)
 ________________________________________
 3. Feature Selection
-•	Wrapper method using CatBoost
-•	Correlation filtering (threshold > 0.8)
-•	Reduced dimensionality while improving model performance
+Wrapper method using CatBoost.
+Correlation filtering (threshold > 0.8)
+Reduced dimensionality while improving model performance.
 ________________________________________
 4. Handling Class Imbalance
-•	Applied:
-o	Class weighting
-o	scale_pos_weight tuning
+Applied:
+Class weighting.
+scale_pos_weight tuning.
 ________________________________________
 5. Modeling Approach
 
 Tested multiple models:
-•	Logistic Regression
-•	KNN
-•	Naïve Bayes
-•	Decision Trees
-•	Random Forest
-•	XGBoost
-•	LightGBM
+Logistic Regression
+KNN
+Naive Bayes
+Decision Trees
+Random Forest
+XGBoost
+LightGBM
 ________________________________________
 Final Model: Stacked Ensemble
 
 Combined:
-•	LightGBM
-•	XGBoost
-•	Random Forest
+LightGBM
+XGBoost
+Random Forest
 
 Result:
 Best AUC: ~0.8638
 ________________________________________
 6. Hyperparameter Optimization
-•	Used Optuna for efficient search
-•	Improved model performance by ~1–2% AUC
+Used Optuna for efficient search
+Improved model performance by ~1–2% AUC
 ________________________________________
 Key Insights
 
 Top predictive features included:
-•	Age group
-•	Perceived risk of infection
-•	Beliefs about vaccine effectiveness
+Age group
+Perceived risk of infection
+Beliefs about vaccine effectiveness
 
 Behavioral perception plays a major role in vaccination decisions.
